@@ -33,7 +33,7 @@ function renderAlarms() {
 }
 
 function toggleAlarm(index, enable) {
-  console.log(`Змінюємо стан будильника: індекс ${index}, новий стан=${enable}`);
+  console.log(`Змінюємо стан будильника: індекс ${index}, новий стан ${enable}`);
   alarms[index].enabled = enable;
   renderAlarms();
 }
