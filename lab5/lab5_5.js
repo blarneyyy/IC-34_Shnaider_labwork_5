@@ -5,7 +5,6 @@ function checkAlarms() {
   const now = new Date();
 
   alarms.forEach((alarm) => {
-    console.log(`Перевіряємо будильник: дата=${alarm.date}, час=${alarm.time}, увімкнено=${alarm.enabled}`);
     if (alarm.enabled && alarm.date === now.toLocaleDateString("uk-UA") && alarm.time === now.toTimeString().slice(0, 5)) {
       alert(`Дзінь-дзінь! Будильник на ${alarm.date} ${alarm.time}`);
       console.log(`Будильник спрацював: дата=${alarm.date}, час=${alarm.time}`);
