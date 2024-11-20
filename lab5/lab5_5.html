@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 5</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Trebuchet MS", sans-serif;
+        background-color: #fafafa;
+        color: #333;
+      }
+      header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #f1f1f1;
+      }
+      h1, h2, h3 {
+        text-align: center;
+        margin: 20px 0;
+      }
+      .alarm-container {
+        max-width: 400px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      .alarm {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+        padding: 10px;
+        border-radius: 5px;
+        color: white;
+        font-size: 1rem;
+      }
+      .alarm[enabled="true"] {
+        background-color: green;
+      }
+      .alarm[enabled="false"] {
+        background-color: red;
+      }
+      input[type="date"], input[type="time"] {
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      button {
+            width: 170px;
+            height: 55px;
+            background-color: rgb(50, 36, 37);
+            color: white;
+            border-radius: 20px;
+            border: none;
+            box-shadow: rgba(0, 0, 0, 0.2) 0 3px 5px -1px,
+                        rgba(0, 0, 0, 0.14) 0 6px 10px 0,
+                        rgba(0, 0, 0, 0.12) 0 1px 18px 0;
+            cursor: pointer;
+            font-weight: 600;
+            margin: 20px;
+            box-sizing: border-box;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+      button:hover {
+            background-color: rgb(11, 3, 4);
+        }
+      button:disabled {
+        background-color: #75404086;
+        cursor: not-allowed;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="../index.html"><button>Повернутися</button></a>
+      <h1>Завдання №5</h1>
+  </header>
+    <div class="alarm-container">
+      <h2>Будильник</h2>
+      <div>
+        <label for="alarm-date">Дата:</label>
+        <input type="date" id="alarm-date" />
+      </div>
+      <div>
+        <label for="alarm-time">Час:</label>
+        <input type="time" id="alarm-time" />
+      </div>
+      <button id="add-alarm">Додати будильник</button>
+      <div class="active-alarms">
+        <h3>Активні будильники</h3>
+        <div id="alarms-list"></div>
+      </div>
+    </div>
+    <script src="lab5_5.js"></script>
+  </body>
+</html>
