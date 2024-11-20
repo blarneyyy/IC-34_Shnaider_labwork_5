@@ -1,9 +1,7 @@
 let alarms = [];
 
 function checkAlarms() {
-  console.log("Перевіряємо будильники...");
   const now = new Date();
-
   alarms.forEach((alarm) => {
     if (alarm.enabled && alarm.date === now.toLocaleDateString("uk-UA") && alarm.time === now.toTimeString().slice(0, 5)) {
       alert(`Дзінь-дзінь! Будильник на ${alarm.date} ${alarm.time}`);
@@ -15,7 +13,6 @@ function checkAlarms() {
 }
 
 function renderAlarms() {
-  console.log("Оновлюємо список будильників...");
   const alarmsList = document.getElementById("alarms-list");
   alarmsList.innerHTML = ""; 
   
